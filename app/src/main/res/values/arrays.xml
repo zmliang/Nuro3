@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="nuro_main_menu_array">
+        <item>纳智捷</item>
+        <item>停车场</item>
+        <item>加油站</item>
+        <item>吃</item>
+        <item>玩</item>
+        <item>买</item>
+        <item>住</item>
+        <item>更多...</item>
+    </string-array>
+</resources>

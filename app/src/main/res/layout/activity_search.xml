@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/nuro_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="#11000000" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="&lt;返回"
+            android:onClick="exit"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="500dp"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:hint="请在此搜索"
+                android:textSize="13dp"
+                android:background="@drawable/bg_edittext"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_margin="1dp"
+                    android:background="#dddddd"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:layout_margin="1dp"
+                    android:background="#dddddd"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:layout_margin="1dp"
+                    android:background="#dddddd"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:layout_margin="1dp"
+                    android:background="#dddddd"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:layout_margin="1dp"
+                    android:background="#dddddd"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.5"
+                    android:text="   ..."
+                    />
+
+            </LinearLayout>
+            <GridView
+                android:id="@+id/search_keyboard"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:horizontalSpacing="2dp"
+                android:verticalSpacing="2dp"
+                android:numColumns="8" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="南京市"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="输入法"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="删除"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#00000000" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:onClick="onSubmit"
+                android:text="确定"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
