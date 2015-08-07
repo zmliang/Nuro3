@@ -19,7 +19,7 @@ import java.security.acl.Group;
 /**
  * Created by nuro on 7/13/15.
  */
-public class SearchResultActivity extends Activity {
+public class SearchResultActivity extends NuroBaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

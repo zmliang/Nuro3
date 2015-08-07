@@ -15,7 +15,7 @@ import android.widget.GridView;
 /**
  * Created by nuro on 7/13/15.
  */
-public class SearchActivity extends Activity {
+public class SearchActivity extends NuroBaseActivity {
 
     public GridView gridView;
 
@@ -66,9 +66,12 @@ public class SearchActivity extends Activity {
             btn.setLayoutParams(lp);
             btn.setText(keyboard[position]);
             btn.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14);
-            btn.setBackgroundColor(0xffdddddd);
+//            btn.setBackgroundColor(0xffdddddd);
+            btn.setTextColor(0xffffffff);
             if (TextUtils.isEmpty(keyboard[position])) {
-                btn.setBackgroundColor(0xffeeeeee);
+                btn.setBackgroundResource(R.drawable.nuro_key_board_disable);
+            } else {
+                btn.setBackgroundResource(R.drawable.nuro_keyboard_bg_selector);
             }
             return btn;
         }

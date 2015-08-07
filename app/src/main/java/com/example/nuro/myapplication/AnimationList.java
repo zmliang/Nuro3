@@ -14,7 +14,7 @@ import java.util.Map;
 public class AnimationList {
     Context context;
 
-    HashMap<View, Animation> map = new HashMap<View, Animation>();
+    HashMap<View, Animation> map = new LinkedHashMap<View, Animation>();
     Animation lastAnimation;
 
     public AnimationList(Context context) {
@@ -63,13 +63,13 @@ public class AnimationList {
 
     public void startAnimation() {
 
-        int time = 200;
+        int time = 0;
         for (Map.Entry<View, Animation> e : map.entrySet()) {
-            final View view = e.getKey();
-            final Animation animation = e.getValue();
+            View view = e.getKey();
+            Animation animation = e.getValue();
             animation.setAnimationListener(new ListListener(view, animation));
             view.postDelayed(new PostAction(view, animation), time);
-            time += 200;
+            time += 300;
         }
 
         //Map.Entry<View, Animation> e = map.entrySet().iterator().next();

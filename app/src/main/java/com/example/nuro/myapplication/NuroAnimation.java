@@ -35,13 +35,13 @@ public class NuroAnimation {
         view.startAnimation(animationSet);
     }
 
-    public static TranslateAnimation animationTranslate() {
+    public static TranslateAnimation animationTranslate(int position) {
         TranslateAnimation translateAnimation = new TranslateAnimation(
-                Animation.RELATIVE_TO_SELF, 3f,
+                Animation.RELATIVE_TO_SELF, 12f,
                 Animation.RELATIVE_TO_SELF, 0f,
-                Animation.RELATIVE_TO_SELF, 3f,
+                Animation.RELATIVE_TO_SELF, 12f,
                 Animation.RELATIVE_TO_SELF, 0f);
-        translateAnimation.setDuration(500);
+        translateAnimation.setDuration(500 - 30 * position);
         return translateAnimation;
     }
 

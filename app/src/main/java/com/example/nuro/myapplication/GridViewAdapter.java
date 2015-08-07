@@ -62,7 +62,7 @@ public class GridViewAdapter extends BaseAdapter {
 //            }, 1000);
 
             textView.setVisibility(View.INVISIBLE);
-            animationList.add(textView, NuroAnimation.animationTranslate());
+            animationList.add(textView, NuroAnimation.animationTranslate(position));
 
             if (position == 7) {
                 animationList.startAnimation();

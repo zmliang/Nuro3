@@ -8,7 +8,7 @@ import android.view.View;
 /**
  * Created by nuro on 7/13/15.
  */
-public class NaviActivity extends Activity {
+public class NaviActivity extends NuroBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

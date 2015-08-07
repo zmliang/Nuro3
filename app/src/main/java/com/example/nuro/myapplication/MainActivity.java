@@ -9,11 +9,10 @@ import android.view.View;
 import android.widget.GridView;
 import android.widget.LinearLayout;
 
-public class MainActivity extends Activity {
-
+public class MainActivity extends NuroBaseActivity {
     public GridView gridView;
-    public LinearLayout historyLayout;
 
+    public LinearLayout historyLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +35,11 @@ public class MainActivity extends Activity {
             gridView.setAdapter(new GridViewAdapter(this));
         }
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 
     @Override
