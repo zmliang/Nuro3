@@ -10,8 +10,8 @@ import android.widget.LinearLayout;
 
 public class MainActivity extends NuroBaseActivity {
     public GridView gridView;
-
     public LinearLayout historyLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +29,7 @@ public class MainActivity extends NuroBaseActivity {
         gridView = (GridView)findViewById(R.id.nuro_main_menu);
         historyLayout = (LinearLayout) findViewById(R.id.history_layout);
         historyLayout.setBackgroundResource(R.drawable.bg_common_button);
-//        NuroAnimation.animationAction(historyLayout);
+        NuroAnimation.animationAction(historyLayout);
 
         if (gridView != null) {
             gridView.setAdapter(new GridViewAdapter(this));
@@ -59,7 +59,4 @@ public class MainActivity extends NuroBaseActivity {
         return super.onOptionsItemSelected(item);
     }
 
-//    public void exit(View view) {
-//        finish();
-//    }
 }

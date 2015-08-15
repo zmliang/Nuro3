@@ -44,9 +44,10 @@ public class LauncheAlertActivity extends NuroBaseActivity {
                             finish();
                             Intent intent = new Intent();
                             intent.setClass(LauncheAlertActivity.this, NaviActivity.class);
+                            finish();
                             startActivity(intent);
                         }
-                    }, 3000);
+                    }, 1500);
                 }
             }
 
@@ -75,17 +76,6 @@ public class LauncheAlertActivity extends NuroBaseActivity {
             @Override
             public Object instantiateItem(ViewGroup container, int position) {
                 container.addView(imageViews[position]);
-//                if (position == 1) {
-//                    imageViews[position].postDelayed(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            finish();
-//                            Intent intent = new Intent();
-//                            intent.setClass(LauncheAlertActivity.this, NaviActivity.class);
-//                            startActivity(intent);
-//                        }
-//                    }, 50000);
-//                }
                 return imageViews[position];
             }
         });

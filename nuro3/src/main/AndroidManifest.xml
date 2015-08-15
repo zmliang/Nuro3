@@ -12,16 +12,15 @@
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
+        android:name="com.nuro.application.NuroApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme"
         android:hardwareAccelerated="true">
 
-            <!--android:name="com.nuro.application.LauncheAlertActivity"-->
-
         <activity
-            android:name="com.nuror1.MainActivity"
+            android:name="com.nuro.application.LauncheAlertActivity"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

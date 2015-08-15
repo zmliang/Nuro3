@@ -23,10 +23,6 @@ public class SearchResultActivity extends NuroBaseActivity {
         l.setAdapter(new NuroListBaseAdapter());
     }
 
-//    public void exit(View view) {
-//        finish();
-//    }
-
     class NuroListBaseAdapter extends BaseAdapter {
 
         @Override

@@ -34,10 +34,6 @@ public class SearchActivity extends NuroBaseActivity {
         gridView.setAdapter(new NuroKeyboardAdapter());
     }
 
-//    public void exit(View view) {
-//        finish();
-//    }
-
     class NuroKeyboardAdapter extends BaseAdapter {
 
         @Override

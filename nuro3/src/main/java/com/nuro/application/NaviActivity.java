@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.nuro.uikit.NaviView;
+import com.nuror1.NuroCore;
+
 /**
  * Created by nuro on 7/13/15.
  */
@@ -22,5 +25,6 @@ public class NaviActivity extends NuroBaseActivity {
             }
         });
 
+        NuroCore.currNaviDrawable = (NaviView)findViewById(R.id.naviView);
     }
 }
