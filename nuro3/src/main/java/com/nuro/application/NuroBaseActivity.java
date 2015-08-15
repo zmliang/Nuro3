@@ -19,13 +19,6 @@ public class NuroBaseActivity extends Activity {
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams. FLAG_FULLSCREEN);
         window.setBackgroundDrawableResource(R.drawable.nuro_bg);
-
-//        requestWindowFeature(Window.FEATURE_NO_TITLE);
-//        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-//        getWindow().setFlags(
-//                WindowManager.LayoutParams.FLAG_FULLSCREEN | WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON,
-//                WindowManager.LayoutParams.FLAG_FULLSCREEN | WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-
     }
 
     @Override
@@ -37,6 +30,18 @@ public class NuroBaseActivity extends Activity {
                 @Override
                 public void onClick(View v) {
                     finish();
+                }
+            });
+        }
+        v = findViewById(R.id.actionbar_map);
+        if (v != null) {
+            v.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent();
+                    intent.setClass(NuroBaseActivity.this, NaviActivity.class);
+                    NuroBaseActivity.super.startActivity(intent);
+                    overridePendingTransition(R.anim.left_in, R.anim.right_out);
                 }
             });
         }

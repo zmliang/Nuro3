@@ -41,13 +41,12 @@ public class LauncheAlertActivity extends NuroBaseActivity {
                     imageViews[position].postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            finish();
                             Intent intent = new Intent();
                             intent.setClass(LauncheAlertActivity.this, NaviActivity.class);
                             finish();
                             startActivity(intent);
                         }
-                    }, 1500);
+                    }, 500);
                 }
             }
 

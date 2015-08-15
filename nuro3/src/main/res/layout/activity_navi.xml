@@ -17,21 +17,22 @@
             android:layout_width="100dp"
             android:layout_height="40dp"
             android:layout_weight="0"
-            android:background="@drawable/bg_common_button"
-            android:textColor="@color/common_button_color"
+            android:background="@drawable/bg_navi_button"
+            android:textColor="@color/navi_button_color"
             android:text="菜单"/>
         <Button
+            android:id="@+id/zoomIn"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="1"
-            android:background="@drawable/bg_common_button"
-            android:textColor="@color/common_button_color"
+            android:background="@drawable/bg_navi_button"
+            android:textColor="@color/navi_button_color"
             android:text="地点"/>
         <Button
             android:layout_width="100dp"
             android:layout_height="40dp"
-            android:background="@drawable/bg_common_button"
-            android:textColor="@color/common_button_color"
+            android:background="@drawable/bg_navi_button"
+            android:textColor="@color/navi_button_color"
             android:text="功能"/>
     </LinearLayout>
 

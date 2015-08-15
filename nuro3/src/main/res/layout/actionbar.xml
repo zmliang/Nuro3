@@ -19,4 +19,19 @@
         android:text="&lt;返回"
         android:background="@drawable/bg_common_button"
         android:textColor="@color/common_button_color" />
+
+    <TextView
+        android:id="@+id/actionbar_map"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:padding="4dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:typeface="monospace"
+        android:text="地图"
+        android:background="@drawable/bg_common_button"
+        android:textColor="@color/common_button_color" />
 </RelativeLayout>

@@ -30,6 +30,7 @@
 
         <activity
             android:name="com.nuro.application.NaviActivity"
+            android:launchMode="singleTask"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

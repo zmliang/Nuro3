@@ -18,6 +18,7 @@ public class SearchResultActivity extends NuroBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+//        getWindow().setBackgroundDrawableResource(R.drawable.nuro_bg_srp);
         setContentView(R.layout.activity_search_result);
         ListView l = (ListView) findViewById(R.id.list_result);
         l.setAdapter(new NuroListBaseAdapter());
@@ -45,7 +46,8 @@ public class SearchResultActivity extends NuroBaseActivity {
 
             if (convertView == null) {
                 TextView btn = new TextView(SearchResultActivity.this);
-                ListView.LayoutParams lp = new ListView.LayoutParams(ListView.LayoutParams.MATCH_PARENT, 120);
+                ListView.LayoutParams lp = new ListView.LayoutParams(ListView.LayoutParams.MATCH_PARENT,
+                        DisplayUtil.dip2px(SearchResultActivity.this, 57.6f));
                 btn.setPadding(DisplayUtil.dip2px(SearchResultActivity.this, 10), 0, 0, 0);
                 btn.setLayoutParams(lp);
                 btn.setGravity(Gravity.CENTER_VERTICAL);
