@@ -51,16 +51,14 @@ public class GridViewAdapter extends BaseAdapter {
             textView.setGravity(Gravity.CENTER);
             //imageview.setScaleType(ImageView.ScaleType.CENTER_INSIDE); // 设置缩放方式
             textView.setPadding(8, 8, 8, 8); // 设置ImageView的内边距
-            textView.setTextColor(0xff666666);
+            textView.setTextColor(0xffaaaaaa);
             textView.setTypeface(Typeface.create("monospace",Typeface.NORMAL));
+            textView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
 
-//            textView.postDelayed(new Runnable() {
-//                @Override
-//                public void run() {
-//                    NuroAnimation.animationTranslate(textView);
-//                }
-//            }, 1000);
-
+                }
+            });
             textView.setVisibility(View.INVISIBLE);
             animationList.add(textView, NuroAnimation.animationTranslate(position));
 
@@ -74,7 +72,8 @@ public class GridViewAdapter extends BaseAdapter {
 
         String [] strings = context.getResources().getStringArray(R.array.nuro_main_menu_array);
         textView.setText(strings[position]);
-        textView.setBackgroundColor(0xffdddddd);
+//        textView.setBackgroundColor(0xffdddddd);
+        textView.setBackgroundResource(R.drawable.bg_common_button);
         //imageview.setImageResource(imageId[position]); // 为ImageView设置要显示的图片
         return textView; // 返回ImageView
     }

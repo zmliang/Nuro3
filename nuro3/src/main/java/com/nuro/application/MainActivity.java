@@ -28,6 +28,7 @@ public class MainActivity extends NuroBaseActivity {
 
         gridView = (GridView)findViewById(R.id.nuro_main_menu);
         historyLayout = (LinearLayout) findViewById(R.id.history_layout);
+        historyLayout.setBackgroundResource(R.drawable.bg_common_button);
 //        NuroAnimation.animationAction(historyLayout);
 
         if (gridView != null) {

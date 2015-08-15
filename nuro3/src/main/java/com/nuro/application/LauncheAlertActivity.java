@@ -33,8 +33,10 @@ public class LauncheAlertActivity extends NuroBaseActivity {
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                // TODO: 8/13/15
+            }
 
+            @Override
+            public void onPageSelected(int position) {
                 if (position == 1) {
                     imageViews[position].postDelayed(new Runnable() {
                         @Override
@@ -46,10 +48,6 @@ public class LauncheAlertActivity extends NuroBaseActivity {
                         }
                     }, 3000);
                 }
-            }
-
-            @Override
-            public void onPageSelected(int position) {
             }
 
             @Override
