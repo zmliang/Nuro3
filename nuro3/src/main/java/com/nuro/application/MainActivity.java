@@ -59,7 +59,7 @@ public class MainActivity extends NuroBaseActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void exit(View view) {
-        finish();
-    }
+//    public void exit(View view) {
+//        finish();
+//    }
 }

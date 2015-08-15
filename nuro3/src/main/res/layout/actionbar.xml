@@ -7,6 +7,7 @@
     android:background="#11000000" >
 
     <TextView
+        android:id="@+id/actionbar_return"
         android:layout_width="60dp"
         android:layout_height="match_parent"
         android:gravity="center"
@@ -17,6 +18,5 @@
         android:typeface="monospace"
         android:text="&lt;返回"
         android:background="@drawable/bg_common_button"
-        android:textColor="@color/common_button_color"
-        android:onClick="exit"/>
+        android:textColor="@color/common_button_color" />
 </RelativeLayout>
