@@ -31,7 +31,7 @@ public class SearchResultActivity extends NuroBaseActivity {
 
         @Override
         public int getCount() {
-            return 40;
+            return 1000;
         }
 
         @Override
@@ -46,16 +46,23 @@ public class SearchResultActivity extends NuroBaseActivity {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            TextView btn = new TextView(SearchResultActivity.this);
-            ListView.LayoutParams lp = new ListView.LayoutParams(ListView.LayoutParams.MATCH_PARENT, 120);
-            btn.setPadding(DisplayUtil.dip2px(SearchResultActivity.this, 10), 0, 0, 0);
-            btn.setLayoutParams(lp);
-            btn.setGravity(Gravity.CENTER_VERTICAL);
-            btn.setBackgroundResource(R.drawable.bg_list_item);
-            btn.setText("滨江高新软件园");
-            btn.setTextColor(Color.WHITE);
-            btn.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 20);
-            return btn;
+
+            if (convertView == null) {
+                TextView btn = new TextView(SearchResultActivity.this);
+                ListView.LayoutParams lp = new ListView.LayoutParams(ListView.LayoutParams.MATCH_PARENT, 120);
+                btn.setPadding(DisplayUtil.dip2px(SearchResultActivity.this, 10), 0, 0, 0);
+                btn.setLayoutParams(lp);
+                btn.setGravity(Gravity.CENTER_VERTICAL);
+                btn.setBackgroundResource(R.drawable.bg_list_item);
+
+                btn.setTextColor(Color.WHITE);
+                btn.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 20);
+                convertView = btn;
+            }
+
+            ((TextView)convertView).setText("滨江高新软件园" + position);
+
+            return convertView;
         }
     }
 }
